@@ -10,7 +10,7 @@ edition = "2018"
 lto = "thin"
 
 [dependencies]
-tihdy = { path = ".."}
-tihdy_derive = { path = "../tihdy_derive" }
+sylt = { git = "https://github.com/FredTheDino/sylt-lang.git", branch = "main" }
+sylt_macro = { git = "https://github.com/FredTheDino/sylt-lang.git", branch = "main" }
 
 macroquad = "0.2"

@@ -1,8 +1,8 @@
 use macroquad::{Camera2D, DARKPURPLE, KeyCode, SKYBLUE, clear_background, draw_rectangle, get_frame_time, is_key_down, next_frame, set_camera, vec2};
 use std::path::Path;
-use tihdy::{Type, Value};
-use tihdy::vm::OpResult;
-use tihdy_derive::extern_function;
+use sylt::{Type, Value};
+use sylt::vm::OpResult;
+use sylt_macro::extern_function;
 
 const SCREEN_WIDTH: f32 = 20.0;
 const SCREEN_HEIGHT: f32 = 20.0;
@@ -49,8 +49,7 @@ extern_function!(clear
 
 #[macroquad::main("Pong")]
 async fn main() {
-
-    let functions: Vec<(String, tihdy::RustFunction)> = vec![
+    let functions: Vec<(String, sylt::RustFunction)> = vec![
         ("log".to_string(), log),
         ("get_delta".to_string(), get_delta),
         ("key_down".to_string(), key_down),
@@ -58,7 +57,7 @@ async fn main() {
         ("clear".to_string(), clear),
     ];
 
-    let vm = tihdy::compile_file(Path::new("pong.tdy"), false, functions);
+    let vm = sylt::compile_file(Path::new("pong.sy"), false, functions);
     if let Err(errs) = vm {
         for err in errs {
             println!("{}", err);

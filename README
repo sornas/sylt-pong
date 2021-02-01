@@ -10,14 +10,14 @@ work.
 Building
 --------
 
-Clone the entire tihdy-repo, cd into the pong-directory and then cargo run.
+Clone and cargo build.
 
 Modifying
 ---------
 
-All game logic is located in pong.tdy. Most of the configuration should be
+All game logic is located in pong.sy. Most of the configuration should be
 straight forward. If you want to modify the controls, you need to change both
-the string passed from pong.tdy as well as the respective function in src/main.rs
+the string passed from pong.sy as well as the respective function in src/main.rs
 (key_down).
 
 If you want to add more rust functions (for example, to draw text to the screen)
