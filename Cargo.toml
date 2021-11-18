@@ -10,7 +10,7 @@ edition = "2018"
 lto = "thin"
 
 [dependencies]
-sylt = { git = "https://github.com/FredTheDino/sylt-lang.git", branch = "main" }
-sylt_macro = { git = "https://github.com/FredTheDino/sylt-lang.git", branch = "main" }
+sylt = { git = "https://github.com/sylt-lang/sylt-lang.git", rev = "f9b6a64" }
+sylt_macro = { git = "https://github.com/sylt-lang/sylt-lang.git", rev = "f9b6a64" }
 
 macroquad = "0.2"
